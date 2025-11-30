@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqpjy6d3ofvl3"]
+
+[ext_resource type="Texture2D" uid="uid://des17ffuvbjj5" path="res://Assets/CyberGhost.png" id="1_5hm5a"]
+
+[node name="CyberGhost" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5hm5a")

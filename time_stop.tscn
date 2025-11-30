@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpxvg73y1v52x"]
+
+[ext_resource type="Script" uid="uid://dtxtkqta0s3gc" path="res://scenes/TimeStop.gd" id="1_1osxv"]
+
+[node name="TimeStop" type="Node"]
+script = ExtResource("1_1osxv")

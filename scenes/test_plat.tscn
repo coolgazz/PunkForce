@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7jb2ax3u1xah"]
+
+[ext_resource type="Texture2D" uid="uid://dwg0r8wcu8dqt" path="res://ridiculous.png" id="1_agbyf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j6evf"]
+size = Vector2(1259, 20)
+
+[node name="testPlat" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(640.5, 2.0000048)
+scale = Vector2(0.59912115, 0.019097216)
+texture = ExtResource("1_agbyf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(619.5, 0)
+scale = Vector2(60, 1)
+shape = SubResource("RectangleShape2D_j6evf")

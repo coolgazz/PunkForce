@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckadd6jqhhjal"]
+
+[ext_resource type="Script" uid="uid://bapiv4yjoaf26" path="res://Start_menu/node_2d.gd" id="1_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://d0a1firqdo5lw" path="res://thumb-1920-939716.png" id="2_jix8l"]
+[ext_resource type="PackedScene" uid="uid://djsxnt4o135yr" path="res://Start_menu/main_menu_phone.tscn" id="3_glbon"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_fu7sn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_jix8l")
+
+[node name="Menu" parent="." instance=ExtResource("3_glbon")]
