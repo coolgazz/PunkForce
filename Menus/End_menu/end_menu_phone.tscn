@@ -1,0 +1,202 @@
+[gd_scene load_steps=13 format=3 uid="uid://dh2dri0vs2ogp"]
+
+[ext_resource type="Theme" uid="uid://b3kq74llqlv3x" path="res://Market/MinimalUI.tres" id="1_2ug3p"]
+[ext_resource type="Script" uid="uid://463bftyewwdk" path="res://End_menu/end_menu_phone.gd" id="2_2ug3p"]
+[ext_resource type="FontFile" uid="uid://djimosiiac8fj" path="res://Market/punk kid.ttf" id="3_71uju"]
+[ext_resource type="PackedScene" uid="uid://0p7384pj4215" path="res://Market/answer_oponent.tscn" id="4_54jd5"]
+[ext_resource type="Texture2D" uid="uid://c22w0ugs0ldgm" path="res://Market/square-box-empty-rect-wrapper-round-shape-svgrepo-com.svg" id="5_bvc0x"]
+[ext_resource type="Texture2D" uid="uid://bdemsp5qx14h5" path="res://Market/circle-svgrepo-com.svg" id="6_n50tm"]
+[ext_resource type="Texture2D" uid="uid://c6qvfgsv47kbr" path="res://Market/triangle-left-svgrepo-com.svg" id="7_relay"]
+[ext_resource type="Texture2D" uid="uid://cbkirnvbvipif" path="res://Market/vecteezy_ai-generated-clear-broken-and-cracked-glass-illustrations_41302637 (1).png" id="8_mvafa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t26cf"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_25dim"]
+font = ExtResource("3_71uju")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_wtcfe"]
+font_size = 20
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_2miam"]
+color = Color(0.39688927, 0.39688927, 0.39688924, 1)
+thickness = 4
+
+[node name="MenuEnd" type="Popup"]
+transparent_bg = true
+oversampling_override = 1.0
+mode = 3
+title = "Punk Force Markket"
+initial_position = 1
+size = Vector2i(400, 800)
+visible = true
+theme = ExtResource("1_2ug3p")
+script = ExtResource("2_2ug3p")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_t26cf")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 55
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="Chat_anonimus" type="Panel" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer/Chat_anonimus"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/Chat_anonimus/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/Chat_anonimus/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Punk force"
+label_settings = SubResource("LabelSettings_25dim")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/Chat_anonimus/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/Chat_anonimus/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Чат: Anonimus"
+label_settings = SubResource("LabelSettings_wtcfe")
+
+[node name="Label2" type="Label" parent="Panel/MarginContainer/VBoxContainer/Chat_anonimus/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Валюта: ∞"
+label_settings = SubResource("LabelSettings_wtcfe")
+
+[node name="Panel" type="Panel" parent="Panel/MarginContainer/VBoxContainer/Chat_anonimus/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer/Chat_anonimus/MarginContainer/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Chat" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/Chat_anonimus/MarginContainer/VBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer/VBoxContainer/Chat_anonimus/MarginContainer/VBoxContainer/Panel/MarginContainer/Chat"]
+layout_mode = 2
+size_flags_vertical = 3
+draw_focus_border = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/Chat_anonimus/MarginContainer/VBoxContainer/Panel/MarginContainer/Chat/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Answer_oponent" parent="Panel/MarginContainer/VBoxContainer/Chat_anonimus/MarginContainer/VBoxContainer/Panel/MarginContainer/Chat/ScrollContainer/VBoxContainer" instance=ExtResource("4_54jd5")]
+layout_mode = 2
+
+[node name="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer/Chat_anonimus/MarginContainer/VBoxContainer/Panel/MarginContainer/Chat/ScrollContainer/VBoxContainer/Answer_oponent/HBoxContainer" index="0"]
+text = "Ты дотянула до конца, хотя по пути всё несколько раз просило “Alt+F4”.
+Теперь у тебя два пути: ещё раз залезть в тот же огонь и попытаться пройти “чисто”,
+или нажать на выход и честно признать, что на сегодня лимит безумия выбрали."
+
+[node name="Answer_1" type="Button" parent="Panel/MarginContainer/VBoxContainer/Chat_anonimus/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Повторить"
+alignment = 0
+autowrap_mode = 2
+
+[node name="Answer_2" type="Button" parent="Panel/MarginContainer/VBoxContainer/Chat_anonimus/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Выход"
+alignment = 0
+autowrap_mode = 2
+
+[node name="Controller" type="Panel" parent="Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/Controller"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Panel/MarginContainer/VBoxContainer/Controller/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("5_bvc0x")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button2" type="Button" parent="Panel/MarginContainer/VBoxContainer/Controller/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("6_n50tm")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button3" type="Button" parent="Panel/MarginContainer/VBoxContainer/Controller/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("7_relay")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/MarginContainer/VBoxContainer"]
+texture_filter = 2
+position = Vector2(86.999985, 85.99999)
+scale = Vector2(0.6653192, 0.71740955)
+texture = ExtResource("8_mvafa")
+
+[node name="HSeparator" type="HSeparator" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -42.0
+offset_right = 42.0
+offset_bottom = 56.0
+grow_horizontal = 2
+theme_override_constants/separation = 23
+theme_override_styles/separator = SubResource("StyleBoxLine_2miam")
+
+[editable path="Panel/MarginContainer/VBoxContainer/Chat_anonimus/MarginContainer/VBoxContainer/Panel/MarginContainer/Chat/ScrollContainer/VBoxContainer/Answer_oponent"]

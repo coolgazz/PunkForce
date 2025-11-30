@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cx0r4b1mdj1vc"]
+
+[node name="Answer_user" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = ">>>"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Йо, meat.patch. Видел твой дамп. Хочу реальный профит, без шлака. Есть пруфы, что это не старый ресайклин?"
+fit_content = true
+scroll_active = false
+autowrap_mode = 2

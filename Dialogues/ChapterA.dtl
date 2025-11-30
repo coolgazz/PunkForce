@@ -1,0 +1,27 @@
+join MC left [animation="Fade In"]
+MC: Уффф
+join CyberGhost right [animation="Slide In Up" length="0.1"]
+CyberGhost: Вставай давай!
+MC: Ты кто?
+CyberGhost: Да уж, ты сильно прложилась, не важно кто я.\
+Важно что МЫ в опасности!
+MC: А?
+CyberGhost: КОРОЧЕ!\
+ЛКМ - Легкая атака\
+ПКМ - Тяжелая атака\
+Пробел - Прыжок\
+WASD - Передвижение
+CyberGhost: Запоминай свои приемчики\:\
+ЛКМ-ЛКМ-ЛКМ\
+ЛКМ-ЛКМ-ПКМ\
+ПКМ-ЛКМ\
+ПКМ-ПКМ
+CyberGhost: 1, 2 ,3  - переключение между нами\
+E - Способность одного из нас
+MC: Подожди, ты сказал "Между нами?"
+leave CyberGhost
+join BioGhost right
+BioGhost: Адаптиция единственный способо выжить!!!
+leave BioGhost
+join ClockGhost right
+ClockGhost: Приведствую!

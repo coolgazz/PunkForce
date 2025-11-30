@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhb35amxaj0ny"]
+
+[ext_resource type="Script" uid="uid://0s7keor8hj0p" path="res://Market/separator_lable.gd" id="1_nawlv"]
+
+[node name="Separator_lable" type="Label"]
+custom_minimum_size = Vector2(0, 18)
+size_flags_horizontal = 3
+script = ExtResource("1_nawlv")
